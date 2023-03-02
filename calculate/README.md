@@ -1,2 +1,15 @@
-# calculate
- Parking Fee Calculate System
+# 费用计算验证系统
+ 基于验算为目的进行开发的费用计算功能。
+
+可以读取xls格式的文档：
+文档要求为：第四行为开始停车时间，第五行为结束停车时间
+
+输出格式为新增第12行为差值结果，如果大于0则说明实收费小于应付费，可能由于实际算法，所以会选择对客户更有利的收费标准。如果小于0则说明计算有误，实际收费大于规定的应收数量
+
+文件使用：
+直接下载工程并在编译器里运行即可，选择对应的文档然后会自动生成结果文件
+
+注意事项：
+文件路径请自行进行修改，文件路径设置为在calculate文件下的WritableWorkbook newBook = Workbook.createWorkbook(new File("C:/Users/chenhengke/Desktop/表.xls"));
+请自行修改new File的路径来修改生成文档的位置。
+如果想法，可以自行修改本代码。
